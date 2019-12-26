@@ -1,6 +1,12 @@
 // col-md //
 @media (min-width:768px) {
     //* index *//
+    // carousel
+    .carousel {
+    &__img--height {
+        height: 700px;
+        }
+    }
     // main-btn
     .btn-item {
         bottom: 0px;

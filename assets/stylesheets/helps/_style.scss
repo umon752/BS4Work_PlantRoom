@@ -66,8 +66,8 @@ body {
 //* index *//
 // carousel
 .carousel {
-    &--maxHeight {
-        max-height: 700px;
+    &__img--height {
+        height: 490px;
     }
     &-inner {
         position: relative;
@@ -109,7 +109,7 @@ body {
     position: relative;
     writing-mode: vertical-lr;  
     overflow: hidden;
-    bottom: -179px;
+    bottom: -80px;
     &:hover > .head__btn--bg {
         filter: blur(0px);
     }

@@ -10556,8 +10556,8 @@ body select {
   -ms-transform: translateX(-5px);
   transform: translateX(-5px); }
 
-.carousel--maxHeight {
-  max-height: 700px; }
+.carousel__img--height {
+  height: 490px; }
 
 .carousel-inner {
   position: relative; }
@@ -10598,7 +10598,7 @@ body select {
   -ms-writing-mode: tb-lr;
   writing-mode: vertical-lr;
   overflow: hidden;
-  bottom: -179px; }
+  bottom: -80px; }
   .btn-item:hover > .head__btn--bg {
     -webkit-filter: blur(0px);
     filter: blur(0px); }
@@ -10783,6 +10783,8 @@ body select {
     top: 28%; }
 
 @media (min-width: 768px) {
+  .carousel__img--height {
+    height: 700px; }
   .btn-item {
     bottom: 0px; }
   .introduction-height {
