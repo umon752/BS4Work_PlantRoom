@@ -10598,7 +10598,7 @@ body select {
   -ms-writing-mode: tb-lr;
   writing-mode: vertical-lr;
   overflow: hidden;
-  bottom: -100px; }
+  bottom: -179px; }
   .btn-item:hover > .head__btn--bg {
     -webkit-filter: blur(0px);
     filter: blur(0px); }
