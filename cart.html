@@ -92,9 +92,10 @@
                                             <div class="d-none d-md-block">
                                                 <div class="d-flex align-items-center">
                                                     <h5 class="mr-4 mb-0">NT$840</h5>
-                                                    <a href="#" class="text-brand-green-light">
-                                                        <i class="fas fa-trash-alt"></i>
-                                                    </a>
+                                                    <button type="button" class="btn" data-toggle="modal"
+                                                        data-title="確認刪除多肉盆栽" data-backdrop="static" data-target="#removeModal">
+                                                        <i class="fas fa-trash-alt text-brand-green-light"></i>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -104,9 +105,10 @@
                             <div class="col d-flex border-bottom border-top my-4 d-md-none">
                                 <div class="ml-auto mr-0 py-3 d-flex align-items-center">
                                     <h5 class="mr-4 mb-0">NT$840</h5>
-                                    <a href="#" class="text-brand-green-light">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </a>
+                                    <button type="button" class="btn" data-toggle="modal"
+                                    data-title="確認刪除多肉盆栽" data-backdrop="static" data-target="#removeModal">
+                                    <i class="fas fa-trash-alt text-brand-green-light"></i>
+                                </button>
                                 </div>
                             </div>
                         </div>
@@ -138,9 +140,10 @@
                                             <div class="d-none d-md-block">
                                                 <div class="d-flex align-items-center">
                                                     <h5 class="mr-4 mb-0">NT$2500</h5>
-                                                    <a href="#" class="text-brand-green-light">
-                                                        <i class="fas fa-trash-alt"></i>
-                                                    </a>
+                                                    <button type="button" class="btn" data-toggle="modal"
+                                                        data-title="確認刪除禪風立花" data-backdrop="static" data-target="#removeModal">
+                                                        <i class="fas fa-trash-alt text-brand-green-light"></i>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -150,9 +153,10 @@
                             <div class="col d-flex border-bottom border-top my-4 d-md-none">
                                 <div class="ml-auto mr-0 py-3 d-flex align-items-center">
                                     <h5 class="mr-4 mb-0">NT$840</h5>
-                                    <a href="#" class="text-brand-green-light">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </a>
+                                    <button type="button" class="btn" data-toggle="modal"
+                                    data-title="確認刪除禪風立花" data-backdrop="static" data-target="#removeModal">
+                                    <i class="fas fa-trash-alt text-brand-green-light"></i>
+                                </button>
                                 </div>
                             </div>
                         </div>
@@ -184,9 +188,10 @@
                                             <div class="d-none d-md-block">
                                                 <div class="d-flex align-items-center">
                                                     <h5 class="mr-4 mb-0">NT$1600</h5>
-                                                    <a href="#" class="text-brand-green-light">
-                                                        <i class="fas fa-trash-alt"></i>
-                                                    </a>
+                                                    <button type="button" class="btn" data-toggle="modal"
+                                                    data-title="確認刪除捧花" data-backdrop="static" data-target="#removeModal">
+                                                    <i class="fas fa-trash-alt text-brand-green-light"></i>
+                                                </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -196,9 +201,10 @@
                             <div class="col d-flex border-bottom border-top my-4 d-md-none">
                                 <div class="ml-auto mr-0 py-3 d-flex align-items-center">
                                     <h5 class="mr-4 mb-0">NT$840</h5>
-                                    <a href="#" class="text-brand-green-light">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </a>
+                                    <button type="button" class="btn" data-toggle="modal"
+                                    data-title="確認刪除捧花" data-backdrop="static" data-target="#removeModal">
+                                    <i class="fas fa-trash-alt text-brand-green-light"></i>
+                                </button>
                                 </div>
                             </div>
                         </div>
@@ -289,10 +295,49 @@
         </section>
     </footer>
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-brand-green-light text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body py-4">
+                    是否確認刪除訂單
+                </div>
+                <div class="modal-footer py-2">
+                    <button type="button" class="btn btn-brand-gray-light text-brand-green-light" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-brand-green-lighter">刪除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 <!-- js -->
 <script src="assets/bootstrap/js/jquery-3.4.1.slim.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- Modal - js -->
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+
+        $('#removeModal').on('show.bs.modal', function (event) {
+            var btn = $(event.relatedTarget) // Button that triggered the modal
+            var title = btn.data('title') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this);
+            modal.find('.modal-title').text(title);
+            // modal.find('.modal-body input').val(recipient)
+        })
+    });
+</script>
 
 </html>
