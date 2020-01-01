@@ -1,0 +1,13 @@
+.header {
+    position: relative;
+    .success__bg {
+        background-color: rgba(209, 209, 209, 0.233);
+    }
+    h1 {
+        font-family: "MingLiU";
+    }
+    .col-10,.col-md-4 {
+        position: absolute;
+        top: 28%;
+    }
+}

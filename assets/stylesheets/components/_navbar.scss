@@ -1,0 +1,21 @@
+.navbar {
+    font-size: 16px;
+    &-brand img {
+        transition: all 300ms linear;
+        &:hover {
+            transform: translateX(-5px);
+            opacity: .5;
+            transition: all 300ms linear;
+        }
+    }
+    &__position--before {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+}
+.nav-item:hover {
+    transform: translateX(-5px);
+}

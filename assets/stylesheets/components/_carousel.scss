@@ -1,0 +1,19 @@
+.carousel {
+    &__img--height {
+        height: 490px;
+    }
+    &-inner {
+        position: relative;
+    }
+}
+
+
+
+// col-md //
+@media (min-width:768px) {
+    .carousel {
+        &__img--height {
+            height: 700px;
+            }
+        }
+}
